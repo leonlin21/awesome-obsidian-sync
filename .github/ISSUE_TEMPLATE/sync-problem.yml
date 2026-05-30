@@ -1,0 +1,46 @@
+name: Sync problem
+description: Report an Obsidian sync problem without sharing private notes.
+title: "[Sync problem]: "
+labels: ["sync-problem"]
+body:
+  - type: dropdown
+    id: sync-method
+    attributes:
+      label: Sync method
+      options:
+        - Obsidian Sync
+        - iCloud
+        - Remotely Save + WebDAV
+        - Git
+        - Syncthing
+        - NAS
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: devices
+    attributes:
+      label: Devices and systems
+      description: Example: macOS 15, iPhone iOS 18, Windows 11.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened
+      description: Describe the problem. Do not paste private note content.
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you already tried
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed private note content, emails, tokens, server addresses, and personal paths.
+          required: true
