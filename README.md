@@ -4,7 +4,7 @@ Obsidian 的笔记都存在本地文件夹里。同步方案选错后，常见�
 
 先看这篇总览：
 
-- [Obsidian 10 种主流同步方案对比](https://21obsidian.com/blog/obsidian-sync-methods-comparison)
+- [Obsidian 11 种主流同步方案对比](https://21obsidian.com/blog/obsidian-sync-methods-comparison)
 
 ## 快速选择
 
@@ -17,7 +17,8 @@ Obsidian 的笔记都存在本地文件夹里。同步方案选错后，常见�
 | 已经在用坚果云 | Nutstore Sync | [坚果云同步教程](https://21obsidian.com/blog/obsidian-nutstore-sync) |
 | 想用对象存储 | Remotely Save + 腾讯云 COS | [腾讯云 COS 同步教程](https://21obsidian.com/blog/obsidian-remotely-save-sync) |
 | 有 NAS 或 WebDAV | Remotely Save + WebDAV | [飞牛 NAS WebDAV 教程](https://21obsidian.com/blog/obsidian-remotely-save-fn-connect-webdav) |
-| 想自建实时同步 | LiveSync + CouchDB | [LiveSync 自建同步教程](https://21obsidian.com/blog/obsidian-livesync-fn-nas-couchdb) |
+| 有 NAS，想要中文后台和历史版本 | Fast Note Sync + 飞牛 Docker | [Fast Note Sync 同步教程](https://21obsidian.com/blog/obsidian-fast-note-sync-fn-docker) |
+| 想自建实时同步，并且能维护数据库 | LiveSync + CouchDB | [LiveSync 自建同步教程](https://21obsidian.com/blog/obsidian-livesync-fn-nas-couchdb) |
 | 想点对点同步 | Syncthing | [Syncthing 同步教程](https://21obsidian.com/blog/obsidian-syncthing-sync) |
 | 想保留完整版本历史 | Git + GitHub | [Obsidian Git 同步教程](https://21obsidian.com/blog/obsidian-git-sync) |
 
@@ -71,9 +72,15 @@ Obsidian 的笔记都存在本地文件夹里。同步方案选错后，常见�
 
 - [Obsidian 飞牛 NAS 同步教程](https://21obsidian.com/blog/obsidian-remotely-save-fn-connect-webdav)
 
+### Fast Note Sync
+
+适合已经有 NAS，又希望同步服务有中文后台、历史版本和回收站的人。它需要先部署服务端，再让各端 Obsidian 插件通过授权令牌接入，同步和新设备授权都比较直观。
+
+- [Obsidian Fast Note Sync 同步教程](https://21obsidian.com/blog/obsidian-fast-note-sync-fn-docker)
+
 ### LiveSync
 
-适合能接受自建服务的人。它可以做到接近实时同步，但要部署 CouchDB，排查成本也更高。
+适合能接受自建服务和数据库维护的人。它可以做到接近实时同步，也支持端到端加密，但要部署 CouchDB，长期使用时需要关注数据库体积、压缩和同步状态。
 
 - [Obsidian LiveSync 自建同步教程](https://21obsidian.com/blog/obsidian-livesync-fn-nas-couchdb)
 
@@ -94,6 +101,7 @@ Obsidian 的笔记都存在本地文件夹里。同步方案选错后，常见�
 ### Obsidian 插件
 
 - [Remotely Save](https://github.com/remotely-save/remotely-save)：支持 S3、WebDAV、OneDrive、Dropbox、Google Drive、Box、pCloud 等后端的同步插件。
+- [Fast Note Sync](https://github.com/haierkeys/obsidian-fast-note-sync)：自建服务端同步插件，支持中文后台、历史版本、回收站和多端授权。
 - [Self-hosted LiveSync](https://github.com/vrtmrz/obsidian-livesync)：基于 CouchDB 的 Obsidian 自建同步插件。
 - [Obsidian Git](https://github.com/Vinzent03/obsidian-git)：在 Obsidian 里使用 Git，支持提交、拉取、推送。
 - [Nutstore Sync](https://github.com/nutstore/obsidian-nutstore-sync)：通过坚果云 WebDAV 同步 Obsidian 的插件。
