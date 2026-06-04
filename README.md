@@ -138,9 +138,3 @@ Obsidian 的笔记都存在本地文件夹里。同步方案选错后，常见�
 如果某篇教程步骤过期、插件仓库迁移、工具停止维护，或者某个同步方案出现新的限制，可以开 issue 说明。
 
 请不要在 issue 里放私人 Vault 内容、邮箱、Token、服务器地址、带有个人信息的截图或真实笔记正文。
-
-## License
-
-这份目录使用 [CC BY-NC-SA 4.0](LICENSE.md)。
-
-代码片段、命令模板和脚本示例使用 [MIT License](LICENSE-CODE.md)。
